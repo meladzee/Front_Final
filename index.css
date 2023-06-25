@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
+body {
+    background-color: rgb(256, 220, 180);
+    overflow-x: hidden;
+}
+
+* {
+    font-family: 'Nunito Sans';
+}
+
+header {
+    display: flex;
+    position: absolute;
+    width: 70vw;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 15px 15px 15px;
+}
+
+.head-nav * {
+    outline: none;
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: black;
+    border-bottom: 1px solid transparent;
+}
+
+.head-nav *:hover {
+    border-bottom: 1px solid black;
+}
+
+header>h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.general-btn {
+    font-size: 1rem;
+    border: 3px solid black;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+}
+
+header button {
+    width: 10%;
+}
+
+.head-nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    margin-top: 150px;
+}
+
+.users>h1 {
+    text-align: center;
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    gap: 20px;
+    margin: auto;
+    margin-bottom: 150px;
+}
+
+.user-info-select-cont {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.user-info-select-cont h2 {
+    margin: 0 0 20px 0;
+}
+
+.user-info-select-cont p {
+    margin: 0;
+    color: gray;
+    width: 100%;
+}
+
+.user-info-select-cont button {
+    margin: 0;
+    padding: 15px;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.uinfops {
+    transition: all 0.4s;
+}
+
+.uinfops:hover {
+    transform: scale(1.05);
+}
+
+.add-post {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 250px;
+    padding: 0 50px 50px 50px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin: auto;
+}
+
+.add-post input {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+}
+
+.add-post input:focus {
+    background-color: rgba(255, 255, 0, 0.4);
+}
+
+.add-post textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.add-post>button {
+    padding: 15px;
+    width: 50%;
+    margin: auto;
+}
+
+.photos>h1 {
+    text-align: center;
+}
+
+.photos {
+    margin-top: 150px;
+    /* background-color: red; */
+}
+
+.photos-cont>img {
+    width: 200px;
+    aspect-ratio: 1/1;
+}
+
+.photos-cont>div {
+    aspect-ratio: 1/1;
+    height: 200px;
+    background-color: aqua;
+}
+
+.photos-cont {
+    display: flex;
+    max-width: 100vw;
+    width: 100vw;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+    .users-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .users-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header h1 {
+        display: none;
+    }
+
+    .head-nav {
+        width: 75%;
+    }
+
+    header button {
+        width: 20%;
+    }
+
+    .users-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+
+    header {
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        height: 100px;
+    }
+
+    .head-nav {
+        width: 100%;
+    }
+
+    .add-post {
+        padding: 0 35px 35px 35px;
+    }
+
+    header button {
+        width: 30%;
+        padding: 15px;
+    }
+
+    .user-info-select-cont button {
+        width: 60%;
+    }
+}
